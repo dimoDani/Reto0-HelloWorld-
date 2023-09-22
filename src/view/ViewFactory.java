@@ -15,7 +15,7 @@ public class ViewFactory {
 	public static View getView(String viewOption) {
 	if (viewOption.equalsIgnoreCase("text"))
     	view = new TextViewImplementation();
-	//else if (modelOption == "database")
+	//else if (modelOption.equals()"window")
 	//	model =  new DbModelImplementation();
 
 	return view;

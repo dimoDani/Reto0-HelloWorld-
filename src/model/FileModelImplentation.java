@@ -17,10 +17,14 @@ public class FileModelImplentation implements Model{
 	private String greeting;
 
 	@Override
-	public String getGreeting() {
-		configFile = ResourceBundle.getBundle("resources.Config");
-		greeting = configFile.getString("GREETING");
-		return(greeting);
+	public String getGreeting() throws Exception{
+		try {
+			configFile = ResourceBundle.getBundle("resources.Config");
+			greeting = configFile.getString("GREETING");
+			return(greeting);
+		} catch (Exception e) {
+			throw e;
+		}
 	}
     
 }

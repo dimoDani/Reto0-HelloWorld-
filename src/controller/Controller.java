@@ -12,9 +12,13 @@ import model.Model;
  *
  * @author Iñigo and Dani
  */
-public class Controller {
+public class Controller  {
     
-	public void Run (View view, Model model) {
-		view.showGreeting(model.getGreeting());
+	public void Run (View view, Model model)  {
+		try {
+			view.showGreeting(model.getGreeting());
+		} catch (Exception e) {
+			
+		}
 	}
 }
