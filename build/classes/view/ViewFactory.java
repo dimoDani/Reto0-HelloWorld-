@@ -10,16 +10,14 @@ package view;
  * @author 2dam
  */
 public class ViewFactory {
-
     private static View view = null;
 
-    public static View getView(String viewOption) {
-        if (viewOption.equalsIgnoreCase("text")) {
-            view = new TextViewImplementation();
-        } else if (viewOption.equals("window")) {
-            view = new JavaFXViewImplementation();
-        }
+	public static View getView(String viewOption) {
+	if (viewOption.equalsIgnoreCase("text"))
+    	view = new TextViewImplementation();
+	//else if (modelOption.equals()"window")
+	//	model =  new DbModelImplementation();
 
-        return view;
-    }
+	return view;
+	}
 }

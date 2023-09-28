@@ -14,7 +14,7 @@ public class ModelFactory {
 
 	public static Model getModel(String modelOption) {
 	if (modelOption.equalsIgnoreCase("file"))
-    	model = new FileModelImplementation();
+    	model = new FileModelImplentation();
 	else if (modelOption.equalsIgnoreCase("database")) 
 				model =  new DbModelImplementation();
 
