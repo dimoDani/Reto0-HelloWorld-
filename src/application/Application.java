@@ -1,25 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 import controller.Controller;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import model.ModelFactory;
 import view.ViewFactory;
 
 /**
- *
- * @author 2dam
+ * Main class of the application. It creates the View and Model objects and runs the application following MVC.
+ * @author Dani and Iñigo
  */
 public class Application {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-		new Controller().Run(ViewFactory.getView(args[0]), ModelFactory.getModel(args[1]));
-    }
-    
+	/**
+	 * The main method of the application.
+	 * @param args The arguments of the application used to choose the View and Model.
+	 */
+	public static void main(String[] args) {
+		if (args.length==2)
+			new Controller().Run(ViewFactory.getView(args[0]), ModelFactory.getModel(args[1]));
+	}
+
 }
