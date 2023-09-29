@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 /**
- *
+ * Model implementation using a database.
  * @author Inigo y Dani
  */
 public class DbModelImplementation implements Model{
@@ -17,7 +12,12 @@ public class DbModelImplementation implements Model{
 private Connection con;
 private PreparedStatement stmt;
 private OpenCloseConnection occ = new OpenCloseConnection();
-
+	/**
+     * Gets a message.
+     *
+     * @return The message.
+     * @throws Exception If there's an error during execution.
+     */
 @Override	
 public String getGreeting() throws Exception{
 			try {

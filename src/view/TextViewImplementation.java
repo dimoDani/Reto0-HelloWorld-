@@ -1,15 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 /**
- *
- * @author 2dam
+ * View implementation for showing the message to the user in the terminal.
+ * @author DAani and Iñigo
  */
 public class TextViewImplementation implements View{
+	/**
+	 * Shows a greeting to the user via the terminal.
+	 * @param greeting The greeting to show.
+	 */
     public void showGreeting(String greeting) {
 		System.out.println(greeting);
 	}
