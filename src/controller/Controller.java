@@ -16,8 +16,12 @@ public class Controller  {
      */
 	public void Run (View view, Model model)  {
 		try {
-			if (view != null)
-				view.showGreeting(model.getGreeting());
+			if (view != null) {
+				if (model == null)
+					view.showGreeting("Could not get the message");
+				else
+					view.showGreeting(model.getGreeting());
+			}			
 		} catch (Exception e) {
 			view.showGreeting(e.getMessage());
 		}

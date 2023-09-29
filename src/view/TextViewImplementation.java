@@ -10,6 +10,6 @@ public class TextViewImplementation implements View{
 	 * @param greeting The greeting to show.
 	 */
     public void showGreeting(String greeting) {
-		System.out.println(greeting);
+			System.out.println(greeting);	
 	}
 }

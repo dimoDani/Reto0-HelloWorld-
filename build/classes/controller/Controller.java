@@ -1,24 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import view.View;
 import model.Model;
 
 /**
- *
- * @author Iñigo and Dani
+ * Controller class to execute the application following MVC.
+ * @author Dani and Iñigo
  */
 public class Controller  {
-    
+    /**
+     * Runs the application with the given view and model.
+     * 
+     * @param view  The View object to show the message to the user.
+     * @param model The Model object to obten the message.
+     */
 	public void Run (View view, Model model)  {
 		try {
-			view.showGreeting(model.getGreeting());
+			if (view != null) {
+				if (model == null)
+					view.showGreeting("Could not get the message");
+				else
+					view.showGreeting(model.getGreeting());
+			}			
 		} catch (Exception e) {
-			
+			view.showGreeting(e.getMessage());
 		}
 	}
 }

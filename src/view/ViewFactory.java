@@ -17,7 +17,7 @@ public class ViewFactory {
         } else if (viewOption.equals("window")) {
             view = new JavaFXViewImplementation();
         } else {
-			System.err.println("Error al crear la vista: el primer argumento no es valido");
+			System.err.println("Error creating the view: the first argument is wrong");
 		}
 
         return view;
