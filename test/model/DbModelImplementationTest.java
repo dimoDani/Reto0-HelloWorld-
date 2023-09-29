@@ -19,7 +19,7 @@ public class DbModelImplementationTest {
     @Test
     public void testGetGreeting() throws Exception {
         DbModelImplementation db = new DbModelImplementation();
-        assertEquals("Hello world!", db.getGreeting());
+        assertEquals("Hello Iñigo", db.getGreeting());
     }
     /**
 	 * Test of getGreeting method, of class DbModelImplementation.
@@ -28,6 +28,6 @@ public class DbModelImplementationTest {
     @Test (expected = Exception.class)
     public void testGetGreetingException() throws Exception {
         DbModelImplementation db = new DbModelImplementation();
-        assertEquals("Hello world!", db.getGreeting());
+        assertEquals("Hello Iñigo", db.getGreeting());
     }
 }
